@@ -1,338 +1,309 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nuno Góis - Full-Stack Developer</title>
-  
-  <link href="https://www.nunogois.com/logo192.png" rel="icon" sizes="192x192" />
-
-  <!-- Open Sans: https://fonts.google.com/specimen/Open+Sans -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-
-  <!-- Bulma: https://bulma.io/ -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bulma-tooltip@2.0.2/dist/css/bulma-tooltip.min.css" rel="stylesheet">
-
-  <!-- Animate.css: https://daneden.github.io/animate.css/ -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/js/all.min.js" type="text/javascript"></script>
-
-  <!-- Axios -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" type="text/javascript"></script>
-  
-  <!-- Promise Polyfill (IE support) -->
-  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
-  
-  <!-- Noty -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" rel="stylesheet">
-  
-  <!-- NG -->
-  <style>
-    html {
-      font-size: calc(0.25em + 1vw);
-      word-spacing: 1px;
-      -ms-text-size-adjust: 100%;
-      -webkit-text-size-adjust: 100%;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      box-sizing: border-box;
-
-      overflow-y: auto;
-
-      padding-bottom: 30px;
-
-      background-color: #fff;
-	  transition: background-color .1s;
-
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 300;
-      color: black;
-    }
-
-    ::-webkit-scrollbar {
-      width: 7px;
-      height: 7px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background: #5c5a5a;
-    }
-
-    .cv-body {
-      width: 100%;
-      max-width: 1000px;
-      text-align: left;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    a.header_link {
-      color: rgb(47, 47, 47);
-    }
-
-    a:hover {
-      color: black;
-    }
-	
-	.dark {
-	  background-color: #1a1a1a;
-	  color: #fff;
-	}
-	
-	.dark body {
-	  color: #fff;
-	}
-	
-	.dark .title {
-	  color: #e2e1e1;
-	}
-	
-	.dark a.header_link {
-	  color: #efebeb;
-	}
-	
-	.dark a {
-	  color: #6cebff;
-	}
-	
-	.dark a:hover {
-	  color: #fff;
-	}
-	
-	.dark-toggle {
-	  color: black;
-	  position: fixed;
-	  top: 20px;
-	  left: 150px;
-	  font-size: 32px;
-		display:none;
-	}
-	
-	.dark .dark-toggle {
-	  color: #fff;
-	}
-	
-	.print-only {
-	  display: none;
-	}
-	
-	@media print {    
-	  .no-print, .no-print * {
-	    display: none !important;
-	  }
-		
-      .print-only, .print-only * {
-        display: block !important;
-      }
-		
-      .noty_layout, .noty_layout * {
-        display: none !important;
-      }
-	}
-  </style>
-</head>
-
-<body>
-  <section class="section" style="padding:10px;">
-    <div class="container cv-body animated fadeInDown">
-      <div class="columns is-mobile is-vcentered" style="border-bottom:1px solid lightgray;">
-        <div class="column is-2" style="max-width:144px;">
-          <img src="https://avatars3.githubusercontent.com/u/14320932?s=460&v=4" width="120px"
-            style="border-radius:10px;">
-        </div>
-        <div class="column" style="padding-left:0px;">
-          <div class="columns">
-            <div class="column" style="padding-bottom:0px;">
-              <h1 class="title is-size-3" style="font-weight:300;">Nuno Góis</h1>
-            </div>
-          </div>
-          <div class="columns">
-            <div class="column" style="padding-bottom:0px;padding-top:0px;">
-              <span class="is-size-5">Full-Stack Developer</span>
-            </div>
-          </div>
-          <div class="columns">
-            <div class="column">
-              <i class="far fa-calendar-alt"></i> <span class="ng_age">29</span> y.o. | 1989-12-27
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="columns">
-            <a href="https://www.nunogois.com/" class="header_link" target="_blank"><i class="fas fa-globe"></i> www.nunogois.com</a>
-          </div>
-          <div class="columns">
-            <a href="https://www.linkedin.com/in/nuno-gois" class="header_link" target="_blank"><i class="fab fa-linkedin"></i>
-              linkedin.com/in/nuno-gois</a>
-          </div>
-          <div class="columns">
-            <a href="https://github.com/nunogois" class="header_link" target="_blank"><i class="fab fa-github-alt"></i> github.com/nunogois</a>
-          </div>
-        </div>
-        <div class="column">
-          <div class="columns">
-            <a href="mailto:me@nunogois.com" class="header_link"><i class="fas fa-at"></i> me@nunogois.com</a>
-          </div>
-          <div class="columns">
-            <a href="javascript:;" class="header_link"><i class="fas fa-mobile-alt"></i> ------------</a>
-          </div>
-          <div class="columns">
-            <a href="https://www.google.com/maps/place/Torres+Vedras/" class="header_link" target="_blank"><i class="fas fa-map-marker-alt"></i> Torres
-              Vedras, Portugal</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container cv-body animated fadeInUp" style="padding-top:30px;">
-      <h1 class="title is-size-5" style="font-weight:300;margin-bottom:10px;"><i class="fas fa-user"></i> Profile</h1>
-      <p>
-        Experienced and driven <span class="ng_age">29</span> years old Full-Stack Developer from Portugal. Passionate for the job, love putting skills to the test, facing challenges in a creative and perfectionist way. 
-        Experienced with every step of developing and delivering cross-platform, modern and responsive software. Worked with several different technologies across the stack, always willing to learn more and improve skills.
-        Over <span class="ng_exp">8</span> years of professional experience and currently working for <a href="https://www.iqa.pt" target="_blank">IQA</a>, developing <a href="https://www.myagir.com" target="_blank">AGIR</a> and all of its related projects.
-        Biggest strenghts lie in bringing a focused, creative and out-of-the-box approach to challenges, leveraging hard-working and quick learning traits.
-      </p>
-      <h1 class="title is-size-5" style="font-weight:300;margin-bottom:10px;margin-top:20px;"><i class="fas fa-star"></i> Skills</h1>
-      <p>
-        Simplistic self-evaluation of current skill levels in relative terms. Detailed information about each skill <a href="https://www.nunogois.com/skills" target="_blank">here</a>.
-      </p>
-      <div class="columns is-multiline animated lightSpeedIn" style="padding-top:20px;">
-        <div class="column is-2">
-          <progress class="progress is-primary is-small" value="95" max="100">95%</progress> JavaScript
-        </div>
-        <div class="column is-2">
-          <progress class="progress is-primary is-small" value="95" max="100">95%</progress> .NET
-        </div>
-        <div class="column is-2">
-          <progress class="progress is-primary is-small" value="85" max="100">85%</progress> Databases
-        </div>
-        <div class="column is-2">
-          <progress class="progress is-primary is-small" value="55" max="100">55%</progress> Java
-        </div>
-        <div class="column is-2">
-          <progress class="progress is-primary is-small" value="45" max="100">45%</progress> C/C++
-        </div>
-        <div class="column is-2">
-          <progress class="progress is-primary is-small" value="65" max="100">65%</progress> Design
-        </div>
-        <div class="column is-2">
-          <progress class="progress is-primary is-small" value="75" max="100">75%</progress> CSS
-        </div>
-        <div class="column is-2">
-          <progress class="progress is-primary is-small" value="70" max="100">70%</progress> Version Control
-        </div>
-        <div class="column is-2">
-          <progress class="progress is-primary is-small" value="65" max="100">65%</progress> Hosting
-        </div>
-        <div class="column is-2">
-          <progress class="progress is-primary is-small" value="80" max="100">80%</progress> Mobile
-        </div>
-        <div class="column is-2">
-          <progress class="progress is-primary is-small" value="45" max="100">45%</progress> Game Dev
-        </div>
-        <div class="column is-2">
-          <progress class="progress is-primary is-small" value="95" max="100">95%</progress> English
-        </div>
-      </div>
-      <p>
-        These are some examples included in their respective category: HTML5, Responsive Design, Vue.js, Node.js, Express, Socket.io, Nuxt.js, Quasar Framework, JSON, Progressive Web App, C#, Visual Basic, .NET Core, ASP.NET, SignalR, Web API, WinForms, Windows Service, Office Add-In, SQL Server, mySQL, MongoDB, Android, Photoshop, jQuery, Bootstrap, Bulma, Git, Team Foundation Server, DevOps, Jenkins, Web Deploy, IIS, FTP, Unity, Trello, etc.
-      </p>
-      <h1 class="title is-size-5" style="font-weight:300;margin-bottom:10px;margin-top:20px;"><i class="fas fa-briefcase"></i> Work Experience</h1>
-      <h2 class="title is-size-6" style="margin-bottom:5px;margin-top:15px;">IQA - Sistemas de Gestão da Qualidade</h2>
-      <h3 class="title is-size-7" style="font-weight:300;margin-bottom:5px;">Full-Stack Developer</h3>
-      <h3 class="title is-size-7" style="font-weight:300;margin-bottom:5px;">2011 - Current</h3>
-      <p style="font-size: .90rem">Developed <a href="https://www.myagir.com" target="_blank">AGIR</a> ® (© <span class="ng_year">2019</span> | <a href="https://www.iqa.pt" target="_blank">IQA - Sistemas de Gestão da Qualidade</a>), 
-        a Quality Management Software (QMS), Process Management (BPM) and Document control software. Worked on the platform since 2011: From ASP.NET, SQL Server, Web API, .NET WinForms or Java to Windows Services and Office Add-Ins, (...).
-        One of the main features of the platform is its flexibility - features like an intuitive Form Designer, a custom JavaScript framework and a business logic assistant mean that it is able to do adapt to every customer need.
-        Worked close to the project manager and customers to ensure that every product meets requirements in a versatile, modern and performant way. Helped the customer on every step when needed - Configuration, deployment, troubleshooting, etc. 
-        Developed and provided APIs, tools and other custom mechanisms in order to adapt and integrate with existing solutions and products.
-      </p>
-
-
-      <h1 class="title is-size-5" style="font-weight:300;margin-bottom:10px;margin-top:20px;"><i class="fas fa-graduation-cap"></i> Education</h1>
-      <h2 class="title is-size-6" style="margin-bottom:5px;margin-top:15px;">Escola Superior de Tecnologia de Setúbal Instituto Politécnico de Setúbal</h2>
-      <h3 class="title is-size-7" style="font-weight:300;margin-bottom:5px;">Degree in Computer Engineering (Unfinished)</h3>
-      <h3 class="title is-size-7" style="font-weight:300;margin-bottom:5px;">2007 - 2010</h3>
-      <p style="font-size: .90rem">Attended the first half of the degree.</p>
-      <h2 class="title is-size-6" style="margin-bottom:5px;margin-top:15px;">Escola Secundária Madeira Torres</h2>
-      <h3 class="title is-size-7" style="font-weight:300;margin-bottom:5px;">Computer Technology Professional Course</h3>
-      <h3 class="title is-size-7" style="font-weight:300;margin-bottom:5px;">2004 - 2007</h3>
-      <p style="font-size: .90rem">Graduated with highest average grade possible (20) at English and very high grades in Programming projects (20 and 19, VB and C++ respectively).</p>
-    </div>
-    <div class="container cv-body animated delay-1s fadeInUp is-size-7" style="padding-top:50px;text-align:center;font-weight:300;">
-      <span>Thank you for your time.</span><br>
-      <span>Feel free to browse my website or contact me for further information.</span><br>
-	  <span class="print-only" style="padding-top:10px;">Please notice that this is a static version and may not be up to date.</span>
-	  <span class="print-only" style="padding-bottom:10px;">I suggest using the HTML version for more information.</span>
-      <span>© <span class="ng_year">2019</span> - Nuno Góis | <span class="ng_date">2019-09-01</span> <span class="animated fadeInRight tooltip" id="up2datetooltip" style="display:none" data-tooltip="This information is up to date."><i id="up2date" class="no-print fas fa-calendar-check" style="color:green;"></i></span></span>
-    </div>
-	<a href="javascript:dark()" class="no-print dark-toggle"><i class="fas fa-adjust"></i></a>
-  </section>
-  <script type="text/javascript">
-	console.log('%cHello, fellow dev. Nice to meet you :)', 'color:cyan')
-	console.table({ name: 'Nuno Góis', job: 'Full-Stack Developer', website: 'https://www.nunogois.com', email: 'me@nunogois.com' })
-  
-    const ng_date = '2019-09-01'
-	
-	axios.get('https://nunogois-api.herokuapp.com/cv').then(function (res) {
-		const data = res.data
-		const up2date = document.getElementById('up2date')
-		const up2datetooltip = document.getElementById('up2datetooltip')
-		
-		if (new Date(data.updated) > new Date(ng_date)) {			
-			up2date.style.color = 'red'
-			up2date.setAttribute('data-icon', 'calendar-times')
-			up2datetooltip.setAttribute('data-tooltip', 'This information is not up to date.')
-			
-			new Noty({ type: 'error', theme: 'metroui', text: '<div class="columns is-vcentered"><div class="column is-2"><i class="fas fa-calendar-times" style="font-size:32px;"></i></div><div class="column">This information is not up to date. Please contact me for an updated version.</div></div>' }).show()
-		}
-		
-		up2datetooltip.style.display = 'inline-block'
-	})
-	
-    document.getElementsByClassName('ng_date')[0].textContent = ng_date
-    document.getElementsByClassName('ng_exp')[0].textContent = getAge('2011-03-01');
-
-    const ng_ages = document.getElementsByClassName('ng_age')
-    for (let i = 0; i < ng_ages.length; i ++) 
-      ng_ages[i].textContent = getAge('1989-12-27')
-
-    const ng_years = document.getElementsByClassName('ng_year')
-    for (let i = 0; i < ng_years.length; i ++)
-      ng_years[i].textContent = new Date().getFullYear()
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nuno Góis - Full-Stack Developer</title>
     
-    function getAge (dateString) {
-      let today = new Date()
-      let birthDate = new Date(dateString)
-      let age = today.getFullYear() - birthDate.getFullYear()
-      let m = today.getMonth() - birthDate.getMonth()
-      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-          age--
+    <link href="https://www.nunogois.com/logo192.png" rel="icon" sizes="192x192" />
+
+    <!-- Open Sans: https://fonts.google.com/specimen/Open+Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <!-- Bulma: https://bulma.io/ -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bulma-tooltip@2.0.2/dist/css/bulma-tooltip.min.css" rel="stylesheet">
+
+    <!-- Animate.css: https://daneden.github.io/animate.css/ -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/js/all.min.js" type="text/javascript"></script>
+
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" type="text/javascript"></script>
+    
+    <!-- Promise Polyfill (IE support) -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+    
+    <!-- Noty -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" rel="stylesheet">
+    
+    <!-- NG -->
+    <style>
+      html {
+        font-size: 1.2em;
+        word-spacing: 1px;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+
+        overflow-y: auto;
+
+        padding-bottom: 30px;
+
+        background-color: #fff;
+        transition: background-color .1s;
       }
-      return age
-    }
-	
-	function dark() {
-	  document.querySelector('html').classList.toggle('dark')
-	}
-  </script>
-</body>
+
+      body {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        color: black;
+      }
+
+      ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #5c5a5a;
+      }
+
+      .cv-body {
+        width: 100%;
+        max-width: 1000px;
+        min-width: 800px;
+        text-align: left;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a.header_link {
+        color: rgb(47, 47, 47);
+      }
+
+      a:hover {
+        color: black;
+      }
+
+      .download {
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: normal;
+        width: 179px;
+      }
+    
+      .print-only {
+        display: none;
+      }
+      
+      @media print {    
+        html {
+          font-size: 0.70em;
+        }
+
+        .no-print, .no-print * {
+          display: none !important;
+        }
+        
+        .print-only, .print-only * {
+          display: block !important;
+        }
+      
+        .noty_layout, .noty_layout * {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="section" style="padding:10px;">
+      <div class="container cv-body animated fadeInDown">
+        <div class="columns is-mobile is-vcentered" style="border-bottom:1px solid lightgray;">
+          <div class="column is-2" style="max-width:120px;">
+            <img src="https://avatars3.githubusercontent.com/u/14320932?s=460&v=4" width="100px"
+              style="border-radius:10px;">
+          </div>
+          <div class="column" style="padding-left:0px;">
+            <div class="columns">
+              <div class="column" style="padding-bottom:0px;">
+                <h1 class="title is-size-3" style="font-weight:300;">Nuno Góis</h1>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column" style="padding-bottom:0px;padding-top:0px;">
+                <span class="is-size-6">Full-Stack Developer</span>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-size-7" style="padding-top:0px;">
+                <i class="far fa-calendar-alt"></i> <span class="ng_age">31</span> y.o. • 1989-12-27
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="columns">
+              <a href="https://www.nunogois.com/" class="header_link" target="_blank"><i class="fas fa-globe"></i> www.nunogois.com</a>
+            </div>
+            <div class="columns">
+              <a href="https://www.linkedin.com/in/nuno-gois" class="header_link" target="_blank"><i class="fab fa-linkedin"></i>
+                linkedin.com/in/nuno-gois</a>
+            </div>
+            <div class="columns">
+              <a href="https://github.com/nunogois" class="header_link" target="_blank"><i class="fab fa-github-alt"></i> github.com/nunogois</a>
+            </div>
+          </div>
+          <div class="column">
+            <div class="columns">
+              <a href="mailto:me@nunogois.com" class="header_link"><i class="fas fa-at"></i> me@nunogois.com</a>
+            </div>
+            <div class="columns">
+              <a href="https://twitter.com/nunogois_dev" class="header_link"><i class="fab fa-twitter"></i> @nunogois_dev</a>
+            </div>
+            <div class="columns">
+              <a href="https://www.google.com/maps/place/Torres+Vedras/" class="header_link" target="_blank"><i class="fas fa-map-marker-alt"></i> Torres
+                Vedras, Portugal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container cv-body animated fadeInUp" style="padding-top:30px;">
+        <div class="no-print" style="padding-bottom:10px;text-align:center;display:flex;justify-content: center;">
+          <div class="download"><i class="fas fa-file-pdf" style="margin-right:5px;"></i> Download PDF</div>
+        </div>
+        <h1 class="title is-size-5" style="font-weight:300;margin-bottom:10px;"><i class="fas fa-user"></i> About Me</h1>
+        <p>
+          Driven <span class="ng_age">31</span> years old Full-Stack Developer from Portugal with over <span class="ng_exp">10</span> years of professional experience. Passionate for the job, love putting skills to the test, facing challenges in a creative and perfectionist way.
+          Experienced with every step of developing and delivering cross-platform, modern and responsive software. Worked with several different technologies across the stack, always willing to learn more and improve skills.
+          Biggest strenghts lie in bringing a focused, creative and out-of-the-box approach to challenges, leveraging hard-working and quick learning traits.
+        </p>
+        <h1 class="title is-size-5" style="font-weight:300;margin-bottom:10px;margin-top:20px;"><i class="fas fa-star"></i> Skills</h1>
+        <p>
+          Tech stack includes, but is not limited to:
+        </p>
+        <p id="skills" style="padding-top:10px;">
+          JavaScript, TypeScript, Jest, React, React Native, Expo, Vue, Quasar, Nuxt.js, Socket.io, .NET, C#, Python, Java, C, C++, SQL Server, 
+          MySQL, SQLite, MongoDB, Redis, Elasticsearch, Node.js, Express, ESLint, Prettier, Webpack, jQuery, Bulma, Bootstrap, HTML, CSS, Stylus, 
+          Git, GitHub, Markdown, Visual Studio, Visual Studio Code, AWS, Oracle Cloud, Docker, Jenkins, Trello, Slack, Discord, Photoshop, PowerShell, Android, Windows, macOS, Linux, Manjaro
+        </p>
+        <h1 class="title is-size-5" style="font-weight:300;margin-bottom:10px;margin-top:20px;"><i class="fas fa-briefcase"></i> Work Experience</h1>
+        <h2 class="title is-size-6" style="margin-bottom:5px;margin-top:15px;">Zoi</h2>
+        <h3 class="title is-size-7" style="font-weight:300;margin-bottom:10px;">06/2011 - Current</h3>
+        <p style="font-size: .90rem;white-space: pre-line">Full-Stack Developer assigned to a React Native app project.
+          Contributed to the project by developing features and fixes for the app.
+          Followed best-practices and guidelines, including writing Unit and E2E tests.
+          Developed a mock package used internally for testing and debugging purposes.
+          Worked on a dynamic multicultural team that follows an Agile / Scrum methodology. 
+          Shared knowledge and learned with teammates through pair programming.
+        </p>
+        <h2 class="title is-size-6" style="margin-bottom:5px;margin-top:15px;">IQA - Sistemas de Gestão da Qualidade</h2>
+        <h3 class="title is-size-7" style="font-weight:300;margin-bottom:10px;">03/2011 - 05/2021</h3>
+        <p style="font-size: .90rem;white-space: pre-line">Full-Stack Developer of multiple projects using many different technologies.
+          Developed AGIR ®, a Quality Management Software (QMS), Process Management (BPM) and Document control software. Worked on the platform since 2011: From ASP.NET, SQL Server, Web API, .NET WinForms or Java to Windows Services and Office Add-Ins, (...).
+          One of the main features of the platform is its flexibility - features like an intuitive Form Designer, a custom JavaScript framework and a business logic assistant mean that it is able to do adapt to every customer need.
+          Worked close to the project manager and customers to ensure that every product meets requirements in a versatile, modern and performant way. Helped the customer on every step when needed - Configuration, deployment, troubleshooting, etc.
+          Developed and provided APIs, tools and other custom mechanisms in order to adapt and integrate with existing solutions and products.
+          Developed a solid foundation for the company's next project, Wisibi, using Quasar Framework (Vue.js) and .NET Core Web API, following all the best practices.
+          Helped setup and manage the team's Trello, TFS, GitHub, Jenkins and other services.
+          Shared knowledge with teammates through training.
+        </p>
+
+
+        <h1 class="title is-size-5" style="font-weight:300;margin-bottom:10px;margin-top:20px;"><i class="fas fa-graduation-cap"></i> Education</h1>
+        <h2 class="title is-size-6" style="margin-bottom:5px;margin-top:15px;">Escola Superior de Tecnologia de Setúbal Instituto Politécnico de Setúbal</h2>
+        <h3 class="title is-size-7" style="font-weight:300;margin-bottom:5px;">Degree in Computer Engineering (Unfinished)</h3>
+        <h3 class="title is-size-7" style="font-weight:300;margin-bottom:5px;">2007 - 2010</h3>
+        <h2 class="title is-size-6" style="margin-bottom:5px;margin-top:15px;">Escola Secundária Madeira Torres</h2>
+        <h3 class="title is-size-7" style="font-weight:300;margin-bottom:5px;">Computer Technology Professional Course</h3>
+        <h3 class="title is-size-7" style="font-weight:300;margin-bottom:5px;">2004 - 2007</h3>
+      </div>
+      <div class="container cv-body animated delay-1s fadeInUp is-size-7" style="padding-top:150px;text-align:center;font-weight:300;">
+        <span>Thank you for your time.</span><br>
+        <span>Feel free to browse my website or contact me for further information.</span><br>
+        <span class="print-only" style="padding-top:10px;">Please notice that this version may not be up to date.</span>
+        <span class="print-only">In case of doubts, refer to the live version:</span>
+        <a href="https://cv.nunogois.com" class="print-only header_link" style="padding-bottom: 10px;">cv.nunogois.com</a>
+        <span>© <span class="ng_year">2021</span> • Nuno Góis • <span class="last_update">2021-08-26</span> <span class="animated fadeInRight tooltip" id="up2datetooltip" style="display:none" data-tooltip="This information is up to date."><i id="up2date" class="no-print fas fa-calendar-check" style="color:green;"></i></span></span>
+      </div>
+
+    </section>
+
+    <script type="text/javascript">
+      console.log('%cHello, fellow dev. Nice to meet you :)', 'color:cyan')
+      console.table({ name: 'Nuno Góis', job: 'Full-Stack Developer', website: 'https://www.nunogois.com', email: 'me@nunogois.com' })
+    
+      loadInfo()
+      loadSkills()
+      checkUpdate()
+
+      function loadInfo () {
+        const expAge = '2011-03-01'
+        const ngAge = '1989-12-27'
+
+        document.getElementsByClassName('ng_exp')[0].textContent = getAge(expAge)
+
+        const ng_ages = document.getElementsByClassName('ng_age')
+        for (let i = 0; i < ng_ages.length; i ++) 
+          ng_ages[i].textContent = getAge(ngAge)
+
+        const ng_years = document.getElementsByClassName('ng_year')
+        for (let i = 0; i < ng_years.length; i ++)
+          ng_years[i].textContent = new Date().getFullYear()
+        
+        function getAge (dateString) {
+          let today = new Date()
+          let birthDate = new Date(dateString)
+          let age = today.getFullYear() - birthDate.getFullYear()
+          let m = today.getMonth() - birthDate.getMonth()
+          if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+              age--
+          }
+          return age
+        }
+      }
+
+      function loadSkills () {
+        axios.get('https://raw.githubusercontent.com/nunogois/nunogois/main/README.md').then(function (res) {
+          const data = res.data
+          const skills = data.substring(data.indexOf('![JavaScript]')).split('###')[0].trim().split('\n')
+          const mappedSkills = skills.map(function (skill) {
+            return {
+              name: skill.match(/\[([^)]+)\]/)[1],
+              image: skill.match(/\(([^)]+)\)/)[1]
+            }
+          })
+          document.getElementById('skills').innerHTML = mappedSkills.map(function (skill) {
+            // return skill.name
+            return `<img src="https://simpleicons.org/icons/${skill.image.split('logo=')[1].split('&')[0].replace(/\./g, 'dot').replace(/%2B/g, 'plus').replace(/-/g, '').toLowerCase()}.svg" style="height:14px" class="no-print" alt="${skill.name}"/> ${skill.name}`
+          }).join(', ')
+        })
+      }
+
+      function checkUpdate () {
+        const lastUpdate = '2021-08-26'
+        document.getElementsByClassName('last_update')[0].textContent = lastUpdate
+
+        axios.get('https://nunogois-api.herokuapp.com/cv').then(function (res) {
+          const data = res.data
+          const up2date = document.getElementById('up2date')
+          const up2datetooltip = document.getElementById('up2datetooltip')
+          
+          if (new Date(data.updated) > new Date(lastUpdate)) {			
+            up2date.style.color = 'red'
+            up2date.setAttribute('data-icon', 'calendar-times')
+            up2datetooltip.setAttribute('data-tooltip', 'This information is not up to date.')
+            
+            new Noty({ type: 'error', theme: 'metroui', text: '<div class="columns is-vcentered"><div class="column is-2"><i class="fas fa-calendar-times" style="font-size:32px;"></i></div><div class="column">This information is not up to date. Please contact me for an updated version.</div></div>' }).show()
+          }
+          
+          up2datetooltip.style.display = 'inline-block'
+        })
+      }
+    </script>
+  </body>
 
 </html>
