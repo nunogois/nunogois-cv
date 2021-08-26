@@ -278,7 +278,7 @@
           })
           document.getElementById('skills').innerHTML = mappedSkills.map(function (skill) {
             // return skill.name
-            return `<img src="https://simpleicons.org/icons/${skill.image.split('logo=')[1].split('&')[0].replace(/\./g, 'dot').replace(/%2B/g, 'plus').replace(/-/g, '').toLowerCase()}.svg" style="height:14px" class="no-print" alt="${skill.name}"/> ${skill.name}`
+            return `<span style="white-space:nowrap;"><img src="https://simpleicons.org/icons/${skill.image.split('logo=')[1].split('&')[0].replace(/\./g, 'dot').replace(/%2B/g, 'plus').replace(/-/g, '').toLowerCase()}.svg" style="height:14px" class="no-print"/> ${skill.name}</span>`
           }).join(', ')
         })
       }
