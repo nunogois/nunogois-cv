@@ -45,8 +45,6 @@
 
         overflow-y: auto;
 
-        padding-bottom: 30px;
-
         background-color: #fff;
         transition: background-color .1s;
       }
@@ -179,7 +177,7 @@
         <p>
           Driven <span class="ng_age">31</span> years old Full-Stack Developer from Portugal with over <span class="ng_exp">10</span> years of professional experience. Passionate for the job, love putting skills to the test, facing challenges in a creative and perfectionist way.
           Experienced with every step of developing and delivering cross-platform, modern and responsive software. Worked with several different technologies across the stack, always willing to learn more and improve skills.
-          Biggest strenghts lie in bringing a focused, creative and out-of-the-box approach to challenges, leveraging hard-working and quick learning traits.
+          Biggest strengths lie in bringing a focused, creative and out-of-the-box approach to challenges, leveraging hard-working and quick learning traits.
         </p>
         <h1 class="title is-size-5" style="font-weight:300;margin-bottom:10px;margin-top:20px;"><i class="fas fa-star"></i> Skills</h1>
         <p>
@@ -222,7 +220,7 @@
         <h3 class="title is-size-7" style="font-weight:300;margin-bottom:5px;">Computer Technology Professional Course</h3>
         <h3 class="title is-size-7" style="font-weight:300;margin-bottom:5px;">2004 - 2007</h3>
       </div>
-      <div class="container cv-body animated delay-1s fadeInUp is-size-7" style="padding-top:150px;text-align:center;font-weight:300;">
+      <div class="container cv-body animated delay-1s fadeInUp is-size-7" style="padding-top:120px;text-align:center;font-weight:300;">
         <span>Thank you for your time.</span><br>
         <span>Feel free to browse my website or contact me for further information.</span><br>
         <span class="print-only" style="padding-top:10px;">Please notice that this version may not be up to date.</span>
@@ -279,7 +277,7 @@
           })
           document.getElementById('skills').innerHTML = mappedSkills.map(function (skill) {
             // return skill.name
-            return `<span style="white-space:nowrap;"><img src="https://simpleicons.org/icons/${skill.image.split('logo=')[1].split('&')[0].replace(/\./g, 'dot').replace(/%2B/g, 'plus').replace(/-/g, '').toLowerCase()}.svg" style="height:14px" class="no-print"/> ${skill.name}</span>`
+            return `<span style="white-space:nowrap;"><img src="https://simpleicons.org/icons/${skill.image.split('logo=')[1].split('&')[0].replace(/\./g, 'dot').replace(/%2B/g, 'plus').replace(/-|_|!/g, '').toLowerCase()}.svg" style="height:14px" class="no-print"/> ${skill.name}</span>`
           }).join(', ')
         })
       }
